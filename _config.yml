@@ -5,8 +5,8 @@ permalink:           pretty
 relative_permalinks: true
 
 # Setup
-title:               Lanyon
-tagline:             '오늘도 뚜벅뚜벅'
+title:               '오늘도 뚜벅뚜벅'
+tagline:             ''
 description:         ''
 url:                 http://SehwanKwak.github.io
 baseurl:             ''
