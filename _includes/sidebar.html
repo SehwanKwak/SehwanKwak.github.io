@@ -16,18 +16,16 @@
       `layout: page` in the front-matter. See readme for usage.
     {% endcomment %}
 
-    {% assign pages_list = site.pages | sort:"url" %}
-    {% for node in pages_list %}
-      {% if node.title != null %}
-        {% if node.layout == "page" %}
-          <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
-        {% endif %}
-      {% endif %}
+    {% for item in site.data.navigation.side_menu %}
+      <a class="sidebar-nav-item{% if page.url == item.url %} active{% endif %}" href="{{ site.baseurl }}{{ item.url }}">
+        {{ item.title }}{% if item.category %} ({{ site.categories[item.category] | size }}){% endif %}
+      </a>
+        {% for entry in item.subfolderitems %}
+          <a class="sidebar-nav-item{% if page.url == entry.url %} active{% endif %}" href="{{ site.baseurl }}{{ entry.url }}">
+            &nbsp;&nbsp;&nbsp;&nbsp;{{ entry.title }}{% if entry.category %} ({{ site.categories[entry.category] | size }}){% endif %}
+          </a>
+        {% endfor %}
     {% endfor %}
-
-    <a class="sidebar-nav-item" href="{{ site.github.repo }}/archive/v{{ site.version }}.zip">Download</a>
-    <a class="sidebar-nav-item" href="{{ site.github.repo }}">GitHub project</a>
-    <span class="sidebar-nav-item">Currently v{{ site.version }}</span>
   </nav>
 
   <div class="sidebar-item">

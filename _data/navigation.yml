@@ -1,0 +1,44 @@
+side_menu:
+  - title: About
+    url: /about
+  - title: 개발
+    category: dev
+    url: /dev
+    subfolderitems:
+      - title: 안드로이드
+        category: android
+        url: /dev/android
+      - title: 코틀린
+        category: kotlin
+        url: /dev/kotlin
+      - title: 자바
+        category: java
+        url: /dev/java
+      - title: 파이썬
+        category: python
+        url: /dev/python
+      - title: 알고리즘문제
+        category: algorithm
+        url: /dev/algorithm
+      - title: 지킬
+        category: jekyll
+        url: /dev/jekyll
+  - title: 어학
+    category: lang
+    url: /lang
+    subfolderitems:
+      - title: 영어
+        category: english
+        url: /lang/english
+      - title: 일본어
+        category: japanese
+        url: /lang/japanese
+      - title: 한자
+        category: hanja
+        url: /lang/hanja
+  - title: 3D프린팅
+    category: 3dprinting
+    url: /3dprinting
+  - title: 재테크
+    category: invest
+    url: /invest

@@ -23,3 +23,74 @@ version:             1.0.0
 plugins:
   - jekyll-paginate
 
+defaults:
+# 더 자세한 경로에 있는 값이 다른 값 덮어씀
+# 참고: https://jekyllrb-ko.github.io/docs/configuration/
+# 레이아웃
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: "categories"
+    values:
+      layout: "category"
+# 카테고리
+# _posts/ 와 _drafts에 모두 적용됨
+  - scope:
+      path: "*/dev"
+    values:
+      categories: "dev"
+  - scope:
+      path: "*/dev/algorithm"
+    values:
+      categories: "dev algorithm"
+  - scope:
+      path: "*/dev/android"
+    values:
+      categories: "dev android"
+  - scope:
+      path: "*/dev/java"
+    values:
+      categories: "dev java"
+  - scope:
+      path: "*/dev/jekyll"
+    values:
+      categories: "dev jekyll"
+  - scope:
+      path: "*/dev/kotlin"
+    values:
+      categories: "dev kotlin"
+  - scope:
+      path: "*/dev/python"
+    values:
+      categories: "dev python"
+  - scope:
+      path: "*/lang"
+    values:
+      categories: "lang"
+  - scope:
+      path: "*/lang/english"
+    values:
+      categories: "lang english"
+  - scope:
+      path: "*/lang/japanese"
+    values:
+      categories: "lang japanese"
+  - scope:
+      path: "*/lang/hanja"
+    values:
+      categories: "lang hanja"
+  - scope:
+      path: "*/3dprinting"
+    values:
+      categories: "3dprinting"
+  - scope:
+      path: "*/invest"
+    values:
+      categories: "invest"
