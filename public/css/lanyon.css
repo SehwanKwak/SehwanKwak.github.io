@@ -154,6 +154,9 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #202020;
   -webkit-transition: all .3s ease-in-out;
           transition: all .3s ease-in-out;
+
+  z-index: 10;
+  visibility: visible;
 }
 @media (min-width: 30em) {
   .sidebar {
@@ -288,8 +291,8 @@ a.sidebar-nav-item:focus {
 }
 
 #sidebar-checkbox:checked + .sidebar {
-  z-index: 10;
-  visibility: visible;
+  /*z-index: 10;*/
+  /*visibility: visible;*/
 }
 #sidebar-checkbox:checked ~ .sidebar,
 #sidebar-checkbox:checked ~ .wrap,
